@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Press+Start+2P&display=swap');
 @import "tailwindcss";
 
 html, body {
@@ -6,6 +7,11 @@ html, body {
   width: 100%;
   min-height: 100%;
   overflow: auto;
+}
+
+.glow {
+  font-family: "Bytesized", sans-serif;
+  text-transform: uppercase;
 }
 
 #root {
@@ -24,8 +30,8 @@ html, body {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px;
   justify-content: center;
   padding: 40px;
   max-width: 1200px;
@@ -33,11 +39,10 @@ html, body {
 
 .flip-card {
   width: 100%;
-  max-width: 800px;
-  height: 500px;  
-  perspective: 1000px; 
+  max-width: 600px;
+  height: calc(600px * 0.5); /* Keeps a rectangular aspect ratio */
+  perspective: 1000px;
 }
-
 .flip-card-inner {
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -60,25 +65,42 @@ html, body {
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
-  padding: 20px;  
+  justify-content: flex-start;
+  padding: 20px;
   text-align: left;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .flip-card-back h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Adjusted for smaller text */
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .flip-card-back p {
-  font-size: 1rem;  
-  line-height: 1.5; 
+  font-size: 0.875rem; /* Adjusted for smaller text */
+  line-height: 1.5;
 }
 
 .flip-card-back a {
   margin-top: 1rem;
-  color: #3b82f6; 
+  color: #3b82f6;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .flip-card {
+      max-width: 100%; 
+      height: calc(100vw * 0.7); /* Keeps width-to-height ratio consistent */
+    }
+  }
+
+  .flip-card-back h1 {
+    font-size: 1rem; 
+  }
+
+  .flip-card-back p {
+    font-size: 0.8rem; 
+  }
 }
