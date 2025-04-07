@@ -40,7 +40,7 @@ html, body {
 .flip-card {
   width: 100%;
   max-width: 600px;
-  height: calc(600px * 0.5); /* Keeps a rectangular aspect ratio */
+  height: calc(600px * 0.5);
   perspective: 1000px;
 }
 .flip-card-inner {
@@ -64,7 +64,6 @@ html, body {
 .flip-card-back {
   transform: rotateY(180deg);
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   padding: 20px;
   text-align: left;
@@ -72,27 +71,23 @@ html, body {
 }
 
 .flip-card-back h1 {
-  font-size: 1.25rem; /* Adjusted for smaller text */
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .flip-card-back p {
-  font-size: 0.875rem; /* Adjusted for smaller text */
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
-.flip-card-back a {
-  margin-top: 1rem;
-  color: #3b82f6;
-  text-decoration: underline;
-}
+
 
 @media (max-width: 768px) {
   @media (max-width: 768px) {
     .flip-card {
       max-width: 100%; 
-      height: calc(100vw * 0.7); /* Keeps width-to-height ratio consistent */
+      height: calc(100vw * 0.7); 
     }
   }
 

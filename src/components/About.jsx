@@ -4,6 +4,7 @@ import ParallaxTilt from "react-parallax-tilt";
 import { services } from "../constants/index";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Link } from "react-router-dom";
+import CV from '/assets/myCV.pdf'
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -83,7 +84,7 @@ const About = () => {
           </p>
           <div className="mt-4 flex items-center justify-center md:justify-start text-blue-600 gap-2">
             <a
-              href="/assets/Tenzin-Chime.pdf"
+              href={CV}
               download
               className="text-[14px] sm:text-[16px] font-semibold transition duration-300 underline"
             >
