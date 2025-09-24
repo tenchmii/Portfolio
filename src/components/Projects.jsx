@@ -29,15 +29,21 @@ const Projects = () => {
         <h2 className="font-black text-3xl sm:text-5xl">Projets</h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto mt-10">
         {projects.map((project) => (
-          <div key={project.id} className="flip-card w-full max-w-[600px] h-[400px] cursor-pointer" onClick={() => handleFlip(project.id)}>
+          <div key={project.id} className="flip-card w-full sm:w-[350px] lg:w-[700px] aspect-video cursor-pointer border-2 border-white rounded-lg" onClick={() => handleFlip(project.id)}>
             <motion.div
               className="flip-card-inner w-full h-full relative"
               animate={{ rotateY: flippedCard === project.id ? 180 : 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flip-card-front w-full h-full bg-cover bg-center rounded-lg shadow-lg" style={{ backgroundImage: `url(${project.frontImage})` }}></div>
+              <div className="flip-card-front w-full h-full rounded-lg overflow-hidden shadow-lg absolute top-0 left-0" style={{ backfaceVisibility: "hidden" }}>
+                <img
+                  src={project.frontImage}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className={`flip-card-back w-full h-full absolute top-0 left-0 flex flex-col text-white p-6 rounded-lg shadow-lg ${project.backgroundColor}`}>
                 <h1 className="text-center text-xl font-bold mb-2">{project.title}</h1>
                 <p className=" text-sm sm:text-base left-0">{project.description}</p>

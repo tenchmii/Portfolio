@@ -1,13 +1,13 @@
 import tools from '/assets/settings.png';
-import darty from '/assets/darty.png';
 import mcdonald from '/assets/mcdonalds.png';
 import franceSecours from '/assets/franceSecours.png';
 import Twitter from '/assets/twitter.png';
-import Meetic from '/assets/meetic.png';
-import Connect4 from '/assets/puissance4.png';
+import SnapChat from '/assets/Snapchat.png';
+import Quiz from '/assets/Quiz.png'
 import Spotify from '/assets/spotify.png'
-import Responsive from '/assets/responsive.png';
-import Cinema from '/assets/cinema.png';
+import MyEvents from '/assets/My-events.png';
+import ECommerce from '/assets/E-commerce.png';
+import vivaTech from '/assets/viva.webp'
 
 export const navLinks = [
    {
@@ -49,18 +49,6 @@ const services = [
 
 const experiences = [
    {
-      title: "Stagiaire",
-      company_name: "Darty",
-      icon: darty,
-      iconBg: "#fff",
-      date: "Jan 2023 - Feb 2024",
-      points: [
-        "Accueilli et conseillé les clients sur les produits électroniques et électroménagers.",
-        "Assisté l'équipe dans la gestion des stocks et la mise en rayon des produits.",
-        "Appris les bases du service client et de la vente en magasin.",
-      ],
-    },
-   {
       title: "Équipier polyvalent",
       company_name: "McDonald's",
       icon: mcdonald,
@@ -77,13 +65,25 @@ const experiences = [
       company_name: "Secours Populaire Français",
       icon: franceSecours,
       iconBg: "#fff",
-      date: "Jan 2025",
+      date: "Dépuis 2025",
       points: [
          "Emballage et préparation de cadeaux pour des événements caritatifs.",
          "Service client et souci du détail pour une présentation soignée.",
          "Travail en équipe dans un environnement dynamique."
       ]
    },
+   {
+      title: "Bénévole",
+      company_name: "Viva Tech",
+      icon: vivaTech,
+      iconBg: "#fff",
+      date: "Juin 2025",
+      points: [
+         "Accueil et orientation des visiteurs lors de l'événement Viva Tech.",
+         "Assistance aux exposants et gestion des flux de participants.",
+         "Contribution à la réussite de l'événement par un service efficace et amical."
+      ]
+   }
 ];
 
 const projects = [
@@ -99,7 +99,7 @@ const projects = [
     },
     {
       id: 2,
-      frontImage: Meetic,
+      frontImage: SnapChat,
       title: "Meetic",
       description: "Le projet individuel et les outils utilisés sont php et mysql",
       duree: "Durée :  2 semains",
@@ -109,7 +109,7 @@ const projects = [
     },
     {
       id: 3,
-      frontImage: Connect4,
+      frontImage: Quiz,
       title: "Connect 4",
       description: "Connect 4 est un jeu classique de stratégie où deux joueurs s’affrontent pour aligner quatre de leurs jetons.",
       duree: "Durée : 2 semaine",
@@ -129,7 +129,7 @@ const projects = [
     },
     {
       id: 5,
-      frontImage: Responsive,
+      frontImage: MyEvents,
       title: "Responsive",
       description: "Projet individuel utilisant CSS pour le rendre réactif sur tous les appareils.",
       duree: "Durée : 2 semaines",
@@ -139,8 +139,8 @@ const projects = [
     },
     {
       id: 6,
-      frontImage: Cinema,
-      title: "MyCinema",
+      frontImage: ECommerce,
+      title: "E-commerce",
       description: "Individual project and tools used are php and mysql",
       duree: "Durée : 2 semaines",
       backgroundColor: "bg-gray-900",

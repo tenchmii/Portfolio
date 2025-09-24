@@ -4,7 +4,7 @@ import ParallaxTilt from "react-parallax-tilt";
 import { services } from "../constants/index";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Link } from "react-router-dom";
-import CV from '/assets/myCV.pdf'
+import CV from '/assets/CV.pdf';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
